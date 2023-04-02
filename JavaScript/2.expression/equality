@@ -1,0 +1,20 @@
+//동등 비교 연산자
+// == 값이 같은지
+// != 값이 다른지
+// === 값과 타입이 둘다 같음
+// !== 값과 타입이 다름
+
+let a = { 
+    id = 'apple'
+};
+
+let b== { 
+    id = 'apple'
+};
+console.log( a==b); // False
+console.log( a===b); // False
+// 객체 끼리 비교 하면 객체는 Heap 에 저장되므로 Memory 주소가 서로 달라 내부 값이 같더라도 다르게 표현된다
+
+console.log( a.id==b.id); // true
+console.log( a.id===b.id); // true
+// 객체 내부의 원시타입 값을 비교하면 Memory 주소가 아닌 실 값을 비교 하기 때문에 같다고 나온다.
